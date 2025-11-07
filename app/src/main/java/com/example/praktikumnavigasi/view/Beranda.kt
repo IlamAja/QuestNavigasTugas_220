@@ -65,3 +65,14 @@ fun HalamanBeranda(
                     .size(150.dp)
                     .clip(CircleShape)
             )
+            Spacer(modifier = Modifier.height(64.dp))
+            Text(
+                text = "Muhammad Islam",
+                style = MaterialTheme.typography.titleLarge,
+                color = Color.Black
+            )
+            Text(
+                text = "20230140220",
+                style = MaterialTheme.typography.titleMedium,
+                color = Color.Black
+            )
