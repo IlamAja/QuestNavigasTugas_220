@@ -94,3 +94,13 @@ fun FormIsian(
                     Text(text = "Perempuan", color = Color.Black)
                 }
             }
+            Spacer(modifier = Modifier.height(16.dp))
+            Column(modifier = Modifier.fillMaxWidth()) {
+                Text(text = stringResource(id = R.string.status_kawin), color = Color.Black)
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    RadioButton(selected = status == "Lajang", onClick = { status = "Lajang" })
+                    Text(text = "Lajang", color = Color.Black)
+                    RadioButton(selected = status == "Menikah", onClick = { status = "Menikah" })
+                    Text(text = "Menikah", color = Color.Black)
+                }
+            }
