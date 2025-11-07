@@ -26,3 +26,19 @@ data class DataUiState(
     val jenisKelamin: String = "",
     val status: String = ""
 )
+
+class DataViewModel : ViewModel() {
+    private val _uiState = MutableStateFlow(DataUiState())
+    val uiState: StateFlow<DataUiState> = _uiState.asStateFlow()
+
+    fun setData(nama: String, alamat: String, jenisKelamin: String, status: String) {
+        _uiState.update {
+            it.copy(
+                nama = nama,
+                alamat = alamat,
+                jenisKelamin = jenisKelamin,
+                status = status
+            )
+        }
+    }
+}
