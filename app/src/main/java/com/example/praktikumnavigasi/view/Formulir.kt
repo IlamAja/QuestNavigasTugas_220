@@ -117,3 +117,10 @@ fun FormIsian(
     }
 }
 
+@Preview(showBackground = true)
+@Composable
+fun FormIsianPreview() {
+    PraktikumNavigasiTheme {
+        FormIsian(onSubmitBtnClick = { _, _, _, _ -> }, onBackBtnClick = {})
+    }
+}
