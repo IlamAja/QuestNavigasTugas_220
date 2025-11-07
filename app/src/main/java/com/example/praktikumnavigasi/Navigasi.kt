@@ -89,3 +89,12 @@ fun DataApp(
         }
     }
 }
+private fun cancelAndBackToHome(navController: NavHostController) {
+    navController.popBackStack(Navigasi.Beranda.name, inclusive = false)
+}
+
+private fun cancelAndBackToFormulir(
+    navController: NavHostController
+){
+    navController.popBackStack(Navigasi.Formulir.name, inclusive = false)
+}
