@@ -42,3 +42,24 @@ class DataViewModel : ViewModel() {
         }
     }
 }
+
+enum class Navigasi {
+    Beranda,
+    Formulir,
+    Detail
+}
+
+@Composable
+fun DataApp(
+    navController: NavHostController = rememberNavController(),
+    dataViewModel: DataViewModel = viewModel(),
+    modifier: Modifier = Modifier
+){
+    val uiState by dataViewModel.uiState.collectAsState()
+
+    Scaffold { isiRuang ->
+        NavHost(
+            navController = navController,
+            startDestination = Navigasi.Beranda.name,
+            modifier = modifier.padding(paddingValues = isiRuang)
+        ){
