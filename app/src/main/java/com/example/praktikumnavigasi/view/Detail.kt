@@ -85,3 +85,12 @@ fun TampilData(
         }
     }
 }
+
+@Composable
+fun DetailItem(label: String, value: String) {
+    Surface(
+        modifier = Modifier.fillMaxWidth(),
+        shape = RoundedCornerShape(8.dp),
+        color = Color.White,
+        shadowElevation = 4.dp
+    )
