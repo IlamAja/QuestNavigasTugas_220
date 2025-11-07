@@ -113,3 +113,11 @@ fun DetailItem(label: String, value: String) {
         }
     }
 }
+
+@Preview(showBackground = true)
+@Composable
+fun TampilDataPreview() {
+    PraktikumNavigasiTheme {
+        TampilData(dataUiState = DataUiState(), onBackToBerandaClick = {}, onBackToFormClick = {})
+    }
+}
