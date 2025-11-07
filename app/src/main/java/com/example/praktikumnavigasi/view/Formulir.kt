@@ -104,3 +104,16 @@ fun FormIsian(
                     Text(text = "Menikah", color = Color.Black)
                 }
             }
+            Spacer(modifier = Modifier.height(32.dp))
+            Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
+                Button(onClick = onBackBtnClick, colors = ButtonDefaults.buttonColors(containerColor = darkPurple)) {
+                    Text("Back", color = Color.White)
+                }
+                Button(onClick = { onSubmitBtnClick(nama, alamat, jenisKelamin, status) }, colors = ButtonDefaults.buttonColors(containerColor = darkPurple)) {
+                    Text("Submit", color = Color.White)
+                }
+            }
+        }
+    }
+}
+
