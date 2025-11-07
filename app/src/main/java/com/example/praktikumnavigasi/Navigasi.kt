@@ -63,3 +63,10 @@ fun DataApp(
             startDestination = Navigasi.Beranda.name,
             modifier = modifier.padding(paddingValues = isiRuang)
         ){
+            composable(route = Navigasi.Beranda.name) {
+                HalamanBeranda(
+                    onNextButtonClicked = {
+                        navController.navigate(Navigasi.Formulir.name)
+                    }
+                )
+            }
