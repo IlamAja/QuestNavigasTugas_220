@@ -47,3 +47,21 @@ fun HalamanBeranda(
                 colors = TopAppBarDefaults.mediumTopAppBarColors(containerColor = darkPurple)
             )
         },
+        containerColor = lightPurple
+    ) { paddingValues ->
+        Column(
+            modifier = modifier
+                .fillMaxSize()
+                .padding(paddingValues)
+                .padding(16.dp),
+            verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            Image(
+                painter = painterResource(id = R.drawable.muka_gue),
+                contentDescription = null,
+                contentScale = ContentScale.Crop,
+                modifier = Modifier
+                    .size(150.dp)
+                    .clip(CircleShape)
+            )
