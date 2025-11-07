@@ -66,3 +66,22 @@ fun TampilData(
             DetailItem(label = stringResource(id = R.string.alamat), value = dataUiState.alamat)
 
             Spacer(modifier = Modifier.weight(1f))
+
+            Button(
+                onClick = onBackToBerandaClick,
+                modifier = Modifier.fillMaxWidth(),
+                colors = ButtonDefaults.buttonColors(containerColor = darkPurple)
+            ) {
+                Text(text = "Beranda", color = Color.White)
+            }
+            Spacer(modifier = Modifier.height(8.dp))
+            Button(
+                onClick = onBackToFormClick,
+                modifier = Modifier.fillMaxWidth(),
+                colors = ButtonDefaults.buttonColors(containerColor = darkPurple)
+            ) {
+                Text(text = "Formulir Pendaftaran", color = Color.White)
+            }
+        }
+    }
+}
