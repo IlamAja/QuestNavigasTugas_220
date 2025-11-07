@@ -93,4 +93,23 @@ fun DetailItem(label: String, value: String) {
         shape = RoundedCornerShape(8.dp),
         color = Color.White,
         shadowElevation = 4.dp
-    )
+    ) {
+        Column(
+            modifier = Modifier.padding(16.dp)
+        ) {
+            Text(
+                text = label.uppercase(),
+                fontSize = 12.sp,
+                color = Color.Gray
+            )
+            Spacer(modifier = Modifier.height(4.dp))
+            Text(
+                text = value,
+                fontWeight = FontWeight.Bold,
+                fontFamily = FontFamily.Cursive,
+                fontSize = 24.sp,
+                color = Color.Black
+            )
+        }
+    }
+}
