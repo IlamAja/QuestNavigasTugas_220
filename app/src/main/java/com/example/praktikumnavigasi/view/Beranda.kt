@@ -84,3 +84,10 @@ fun HalamanBeranda(
     }
 }
 
+@Preview(showBackground = true)
+@Composable
+fun PreviewHalamanBeranda() {
+    PraktikumNavigasiTheme {
+        HalamanBeranda(onNextButtonClicked = {})
+    }
+}
