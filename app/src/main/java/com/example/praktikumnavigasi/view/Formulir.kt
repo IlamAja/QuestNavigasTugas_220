@@ -84,3 +84,13 @@ fun FormIsian(
                     unfocusedTextColor = Color.Black
                 )
             )
+            Spacer(modifier = Modifier.height(16.dp))
+            Column(modifier = Modifier.fillMaxWidth()) {
+                Text(text = stringResource(id = R.string.jenis_kelamin), color = Color.Black)
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    RadioButton(selected = jenisKelamin == "Laki-laki", onClick = { jenisKelamin = "Laki-laki" })
+                    Text(text = "Laki-laki", color = Color.Black)
+                    RadioButton(selected = jenisKelamin == "Perempuan", onClick = { jenisKelamin = "Perempuan" })
+                    Text(text = "Perempuan", color = Color.Black)
+                }
+            }
