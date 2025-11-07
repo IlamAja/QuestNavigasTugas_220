@@ -53,3 +53,23 @@ fun FormIsian(
                 colors = TopAppBarDefaults.mediumTopAppBarColors(containerColor = darkPurple)
             )
         },
+        containerColor = lightPurple
+    ) { paddingValues ->
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(paddingValues)
+                .padding(16.dp),
+            verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            OutlinedTextField(
+                value = nama,
+                onValueChange = { nama = it },
+                label = { Text(stringResource(id = R.string.nama_lengkap)) },
+                modifier = Modifier.fillMaxWidth(),
+                colors = OutlinedTextFieldDefaults.colors(
+                    focusedTextColor = Color.Black,
+                    unfocusedTextColor = Color.Black
+                )
+            )
