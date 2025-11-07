@@ -48,3 +48,21 @@ fun TampilData(
                 colors = TopAppBarDefaults.mediumTopAppBarColors(containerColor = darkPurple)
             )
         },
+        containerColor = lightPurple
+    ){     paddingValues->
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(paddingValues)
+                .padding(16.dp),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            DetailItem(label = stringResource(id = R.string.nama_lengkap), value = dataUiState.nama)
+            Spacer(modifier = Modifier.height(16.dp))
+            DetailItem(label = stringResource(id = R.string.jenis_kelamin), value = dataUiState.jenisKelamin)
+            Spacer(modifier = Modifier.height(16.dp))
+            DetailItem(label = "STATUS PERKAWINAN", value = dataUiState.status)
+            Spacer(modifier = Modifier.height(16.dp))
+            DetailItem(label = stringResource(id = R.string.alamat), value = dataUiState.alamat)
+
+            Spacer(modifier = Modifier.weight(1f))
