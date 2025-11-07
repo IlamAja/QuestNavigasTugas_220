@@ -79,3 +79,13 @@ fun DataApp(
                     onBackBtnClick = { cancelAndBackToHome(navController) }
                 )
             }
+            composable(route = Navigasi.Detail.name){
+                TampilData(
+                    dataUiState = uiState,
+                    onBackToBerandaClick = { cancelAndBackToHome(navController) },
+                    onBackToFormClick = { cancelAndBackToFormulir(navController) }
+                )
+            }
+        }
+    }
+}
