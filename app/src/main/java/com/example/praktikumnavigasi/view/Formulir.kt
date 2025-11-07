@@ -73,3 +73,14 @@ fun FormIsian(
                     unfocusedTextColor = Color.Black
                 )
             )
+            Spacer(modifier = Modifier.height(16.dp))
+            OutlinedTextField(
+                value = alamat,
+                onValueChange = { alamat = it },
+                label = { Text(stringResource(id = R.string.alamat)) },
+                modifier = Modifier.fillMaxWidth(),
+                colors = OutlinedTextFieldDefaults.colors(
+                    focusedTextColor = Color.Black,
+                    unfocusedTextColor = Color.Black
+                )
+            )
