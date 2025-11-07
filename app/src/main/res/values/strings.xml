@@ -12,4 +12,5 @@
     <string name="list_judul">List Daftar Peserta</string>
     <string name="status_kawin">STATUS PERKAWINAN</string>
     <string name="beranda">Beranda</string>
+    <string name="formulir_pendaftaran">Formulir Pendaftaran</string>
 </resources>
