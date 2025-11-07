@@ -9,11 +9,12 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.praktikumnavigasi.view.FormIsian
+import com.example.praktikumnavigasi.view.HalamanBeranda
 import com.example.praktikumnavigasi.view.TampilData
 
 enum class Navigasi {
+    Beranda,
     Formulir,
-
     Detail
 }
 
@@ -25,10 +26,16 @@ fun DataApp(
     Scaffold { isiRuang ->
         NavHost(
             navController = navController,
-            startDestination = Navigasi.Formulir.name,
-
+            startDestination = Navigasi.Beranda.name,
             modifier = modifier.padding(paddingValues = isiRuang)
         ){
+            composable(route = Navigasi.Beranda.name) {
+                HalamanBeranda(
+                    onNextButtonClicked = {
+                        navController.navigate(Navigasi.Formulir.name)
+                    }
+                )
+            }
             composable(route = Navigasi.Formulir.name){
                 FormIsian (
                     onSubmitBtnClick = {
