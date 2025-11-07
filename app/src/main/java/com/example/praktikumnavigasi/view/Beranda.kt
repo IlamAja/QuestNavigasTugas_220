@@ -40,3 +40,10 @@ fun HalamanBeranda(
     val lightPurple = Color(0xFFF3E5F5)
     val darkPurple = Color(0xFF8E44AD)
 
+    Scaffold(
+        topBar = {
+            TopAppBar(
+                title = { Text(text = stringResource(id = R.string.selamat_datang), color = Color.White) },
+                colors = TopAppBarDefaults.mediumTopAppBarColors(containerColor = darkPurple)
+            )
+        },
