@@ -70,3 +70,12 @@ fun DataApp(
                     }
                 )
             }
+            composable(route = Navigasi.Formulir.name){
+                FormIsian (
+                    onSubmitBtnClick = { nama, alamat, jenisKelamin, status ->
+                        dataViewModel.setData(nama, alamat, jenisKelamin, status)
+                        navController.navigate(Navigasi.Detail.name)
+                    },
+                    onBackBtnClick = { cancelAndBackToHome(navController) }
+                )
+            }
