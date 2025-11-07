@@ -76,3 +76,11 @@ fun HalamanBeranda(
                 style = MaterialTheme.typography.titleMedium,
                 color = Color.Black
             )
+            Spacer(modifier = Modifier.height(32.dp))
+            Button(onClick = onNextButtonClicked, colors = ButtonDefaults.buttonColors(containerColor = darkPurple)) {
+                Text("Submit", color = Color.White)
+            }
+        }
+    }
+}
+
